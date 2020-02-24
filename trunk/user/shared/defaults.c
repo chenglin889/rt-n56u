@@ -169,7 +169,7 @@ struct nvram_pair router_defaults[] = {
 	{ "wl_rts", "2347" },			/* RTS threshold */
 	{ "wl_frag", "2346" },			/* Fragmentation threshold */
 	{ "wl_ap_isolate", "0" },		/* AP isolate mode */
-	{ "wl_closed", "0" },			/* Closed (hidden) network */
+	{ "wl_closed", "1" },			/* Closed (hidden) network */
 	{ "wl_macmode", "disabled" },		/* "allow" only, "deny" only, or "disabled"(allow all) */
 	{ "wl_maclist", "" },			/* xx:xx:xx:xx:xx:xx ... */
 	{ "wl_wme", "0" },			/* WME mode (off|on) */
@@ -225,8 +225,8 @@ struct nvram_pair router_defaults[] = {
 	{ "wl_HT_BAWinSize", "64" },
 	{ "wl_HT_AutoBA", "1" },
 	{ "wl_VgaClamp", "0" },
-	{ "wl_KickStaRssiLow", "0" },
-	{ "wl_AssocReqRssiThres", "0" },
+	{ "wl_KickStaRssiLow", "-88" },
+	{ "wl_AssocReqRssiThres", "-87" },
 
 	// guest AP 5Ghz
 	{ "wl_guest_enable", "0" },
@@ -271,7 +271,7 @@ struct nvram_pair router_defaults[] = {
 	{ "rt_rts", "2347" },
 	{ "rt_frag", "2346" },
 	{ "rt_ap_isolate", "0" },
-	{ "rt_closed", "0" },
+	{ "rt_closed", "1" },
 	{ "rt_macmode", "disabled" },
 	{ "rt_mrate", "2" },
 	{ "rt_mode", "ap" },
@@ -408,8 +408,8 @@ struct nvram_pair router_defaults[] = {
 	{ "koolproxy_set", "0"},
 	{ "hosts_ad", "0"},
 	{ "tv_hosts", "0"},
-	{ "koolproxy_video", "0"},
-	{ "koolproxy_cpu", "0"},
+	{ "koolproxy_video", "1"},
+	{ "koolproxy_cpu", "1"},
 	{ "koolproxy_prot", "0"},
 	{ "rules_list", "0"},
 	{ "koolproxy_txt_0", "https://houzi-.coding.net/p/my_dream/d/my_dream/git/raw/master/koolproxy.txt"},
@@ -421,7 +421,7 @@ struct nvram_pair router_defaults[] = {
 	{ "koolproxy_txt_2", ""},
 	{ "daily_txt_2", ""},
 	{ "kp_dat_2", ""},
-	{ "koolproxy_update", "0"} ,
+	{ "koolproxy_update", "2"} ,
 	{ "koolproxy_update_hour", "3" },
 	{ "kolproxy_update_min", "00" },
     { "ss_DNS_Redirect", "0" },
@@ -430,8 +430,8 @@ struct nvram_pair router_defaults[] = {
 	
 	/*Adbyby PlUS+*/
 	{ "adbyby_enable", "0" },
-	{ "adbyby_set", "0" },
-	{ "adbyby_adb_update", "0" },
+	{ "adbyby_set", "1" },
+	{ "adbyby_adb_update", "1" },
 	{ "adbyby_update", "2" },
 	{ "adbyby_update_hour", "03" },
 	{ "adbyby_update_min", "30" },
@@ -693,14 +693,14 @@ struct nvram_pair router_defaults[] = {
 	/*SmartDns*/
 	{ "sdns_enable", "0" },
 	{ "snds_name", "smartdns" },
-	{ "sdns_port", "6053" },
-	{ "sdns_tcp_server", "0" },
+	{ "sdns_port", "123" },
+	{ "sdns_tcp_server", "1" },
 	{ "sdns_ipv6_server", "0" },
-	{ "snds_ip_change", "0" },
+	{ "snds_ip_change", "1" },
 	{ "sdns_www", "0" },
 	{ "sdns_exp", "0" },
-	{ "snds_redirect", "0" },
-	{ "snds_cache", "0" },
+	{ "snds_redirect", "1" },
+	{ "snds_cache", "10240" },
 	{ "sdns_ttl", "300" },
 	{ "sdns_ttl_min", "60" },
 	{ "sdns_ttl_max", "86400" },
@@ -862,9 +862,9 @@ struct nvram_pair router_defaults[] = {
 #endif
 	{ "watchdog_cpu", "1" },
 	{ "front_led_all", "1" },
-	{ "front_led_wan", "2" },
+	{ "front_led_wan", "3" },
 	{ "front_led_lan", "2" },
-	{ "front_led_wif", "1" },
+	{ "front_led_wif", "0" },
 	{ "front_led_usb", "1" },
 	{ "front_led_pwr", "1" },
 
@@ -1062,7 +1062,7 @@ struct nvram_pair tables_defaults[] = {
 	{ "v2_http2_path_x", "" },
 	{ "v2_tls_x", "0" },
 	
-	{ "sdnss_enable_x", "" },
+	{ "sdnss_enable_x", "1" },
 	{ "sdnss_name_x", "" },
 	{ "sdnss_ip_x", "" },
 	{ "sdnss_port_x", "" },
