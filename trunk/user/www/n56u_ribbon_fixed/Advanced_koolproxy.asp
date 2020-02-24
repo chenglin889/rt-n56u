@@ -198,7 +198,7 @@ function button_updatead(){
                                             <td id="koolproxy_status" colspan="3"></td>
                                         </tr>
 										<tr >
-											<th width="30%" style="border-top: 0 none;">启用 koolproxy 功能 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input id="kp_update_b" class="btn btn-success" style="width:110px display:none;" type="button" name="updatefrp" value="重置程序" onclick="submitInternet('resetkp');" /></th>
+											<th width="30%" style="border-top: 0 none;">启用 koolproxy 功能 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input id="kp_update_b" class="btn btn-success" style="width:110px display:none;" type="button" name="updatefrp" value="重启，更新状态" onclick="submitInternet('resetkp');" /></th>
 											<td style="border-top: 0 none;">
 													<div class="main_itoggle">
 													<div id="koolproxy_enable_on_of">
