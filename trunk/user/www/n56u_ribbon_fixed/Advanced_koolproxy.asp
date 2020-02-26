@@ -308,7 +308,7 @@ function button_updatead(){
 													<option value="1" <% nvram_match_x("","koolproxy_update", "1","selected"); %>>每隔</option>
 													<option value="2" <% nvram_match_x("","koolproxy_update", "2","selected"); %>>关闭</option>
 												</select>
-												<input style="width: 20px;" type="text" maxlength="2"  class="none" size="60" name="koolproxy_update_hour" placeholder="23" value="<% nvram_get_x("","koolproxy_update_hour"); %>" onKeyPress="return is_number(this,event);"/>时，<input style="width: 20px;" type="text" maxlength="2"  class="none" size="60" name="koolproxy_update_min" placeholder="59" value="<% nvram_get_x("","koolproxy_update_min"); %>" onKeyPress="return is_number(this,event);"/>分，更新
+												<input style="width: 20px;" type="text" maxlength="2"  class="none" size="60" name="koolproxy_update_hour" placeholder="72" value="<% nvram_get_x("","koolproxy_update_hour"); %>" onKeyPress="return is_number(this,event);"/>时，<input style="width: 20px;" type="text" maxlength="2"  class="none" size="60" name="koolproxy_update_min" placeholder="59" value="<% nvram_get_x("","koolproxy_update_min"); %>" onKeyPress="return is_number(this,event);"/>分，更新
 												&nbsp;<span style="color:#888;"></span>
 												<div>&nbsp;<span style="color:#888;">注意：更新时可能会造成网游断线！</span></div>
 											</td>
