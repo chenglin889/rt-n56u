@@ -424,7 +424,7 @@ struct nvram_pair router_defaults[] = {
 	{ "koolproxy_update", "2"} ,
 	{ "koolproxy_update_hour", "5" },
 	{ "kolproxy_update_min", "00" },
-    { "ss_DNS_Redirect", "0" },
+ 	{ "ss_DNS_Redirect", "0" },
 	{ "kp_ip_x", "0" },
 	{ "kp_staticnum_x", "0" },
 	
@@ -700,7 +700,7 @@ struct nvram_pair router_defaults[] = {
 	{ "sdns_www", "0" },
 	{ "sdns_exp", "0" },
 	{ "snds_redirect", "1" },
-	{ "snds_cache", "10240" },
+	{ "snds_cache", "40960" },
 	{ "sdns_ttl", "300" },
 	{ "sdns_ttl_min", "60" },
 	{ "sdns_ttl_max", "86400" },
@@ -717,6 +717,7 @@ struct nvram_pair router_defaults[] = {
 	{ "sdnse_as", "0" },
 	{ "sdnse_ipc", "0" },
 	{ "sdnse_cache", "0" },
+	{ "sdnss_enable_x_0", "1" },
 	{ "ss_white", "0" },
 	{ "ss_black", "0" },
 	
@@ -1062,7 +1063,6 @@ struct nvram_pair tables_defaults[] = {
 	{ "v2_http2_path_x", "" },
 	{ "v2_tls_x", "0" },
 	
-	{ "sdnss_enable_x_0", "1" },
 	{ "sdnss_name_x", "" },
 	{ "sdnss_ip_x", "" },
 	{ "sdnss_port_x", "" },
