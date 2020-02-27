@@ -15,6 +15,12 @@ koolproxy_adblock=`nvram get koolproxy_adblock`
 koolproxy_cpu=`nvram get koolproxy_cpu`
 ss_DNS_Redirect=`nvram get ss_DNS_Redirect`
 ss_DNS_Redirect_IP=`nvram get ss_DNS_Redirect_IP`
+	if [ ! -z "$(grep -v '^#' /etc/storage/shadowsocks_ss_spec_lan.sh | sort -u | grep -v "^$" | sed s/！/!/g)" ] ; then
+	if [ ! -z "$(grep -v '^#' /etc/storage/shadowsocks_ss_spec_lan.sh | sort -u | grep -v "^$" | sed s/！/!/g)" ] ; then
+	if [ ! -z "$(grep -v '^#' /etc/storage/shadowsocks_ss_spec_lan.sh | sort -u | grep -v "^$" | sed s/！/!/g)" ] ; then
+	if [ ! -z "$(grep -v '^#' /etc/storage/shadowsocks_ss_spec_lan.sh | sort -u | grep -v "^$" | sed s/！/!/g)" ] ; then
+	if [ ! -z "$(grep -v '^#' /etc/storage/shadowsocks_ss_spec_lan.sh | sort -u | grep -v "^$" | sed s/！/!/g)" ] ; then
+	if [ ! -z "$(grep -v '^#' /etc/storage/shadowsocks_ss_spec_lan.sh | sort -u | grep -v "^$" | sed s/！/!/g)" ] ; then
 ss_link_1=`nvram get ss_link_1`
 adbyby_enable=`nvram get adbyby_enable`
 adm_enable=`nvram get adm_enable`
@@ -37,6 +43,12 @@ lan_ipaddr=`nvram get lan_ipaddr`
 #[ "$koolproxy_video" = "1" ] && mode_video=" -e " || mode_video=""
 
 if [ "$ss_enable" = "1" ] ; then
+	if [ ! -z "$(grep -v '^#' /etc/storage/shadowsocks_ss_spec_lan.sh | sort -u | grep -v "^$" | sed s/！/!/g)" ] ; then
+	if [ ! -z "$(grep -v '^#' /etc/storage/shadowsocks_ss_spec_lan.sh | sort -u | grep -v "^$" | sed s/！/!/g)" ] ; then
+	if [ ! -z "$(grep -v '^#' /etc/storage/shadowsocks_ss_spec_lan.sh | sort -u | grep -v "^$" | sed s/！/!/g)" ] ; then
+	if [ ! -z "$(grep -v '^#' /etc/storage/shadowsocks_ss_spec_lan.sh | sort -u | grep -v "^$" | sed s/！/!/g)" ] ; then
+	if [ ! -z "$(grep -v '^#' /etc/storage/shadowsocks_ss_spec_lan.sh | sort -u | grep -v "^$" | sed s/！/!/g)" ] ; then
+	if [ ! -z "$(grep -v '^#' /etc/storage/shadowsocks_ss_spec_lan.sh | sort -u | grep -v "^$" | sed s/！/!/g)" ] ; then
 	if [ ! -z "$(grep -v '^#' /etc/storage/shadowsocks_ss_spec_lan.sh | sort -u | grep -v "^$" | sed s/！/!/g)" ] ; then
 		mode_video="$mode_video --mark "
 	fi
@@ -576,12 +588,8 @@ nvram set rules_list_old="$rules_list"
 	#[ ! -z "`pidof koolproxy`" ] && logger -t "【koolproxy】" "等待规则下载，请等待10秒！" && sleep 10
 	hash krdl 2>/dev/null && krdl_ipset
 fi
-if [ -s /tmp/7620koolproxy/data/rules/koolproxy.txt ] ; then
-nvram set koolproxy_rules_date_local="`sed -n '1,10p' /tmp/7620koolproxy/data/rules/koolproxy.txt | grep "$(sed -n '1,10p' /tmp/7620koolproxy/data/rules/koolproxy.txt | grep -Eo '[0-9]+-[0-9]+-[0-9]+ [0-9]+:[0-9]+|201?.{1}' | sed -n '1p')" | sed 's/[x!]//g' | sed -r 's/-{2,}//g' | sed -r 's/\ {2}//g' | sed -r 's/\ {2}//g' | sed -n '1p'`"
-nvram set koolproxy_rules_nu_local="`cat /tmp/7620koolproxy/data/rules/koolproxy.txt | grep -v ! | wc -l`"
-nvram set koolproxy_video_date_local="`sed -n '1,10p' /tmp/7620koolproxy/data/rules/koolproxy.txt | grep "$(sed -n '1,10p' /tmp/7620koolproxy/data/rules/koolproxy.txt | grep -Eo '[0-9]+-[0-9]+-[0-9]+ [0-9]+:[0-9]+|201?.{1}' | sed -n '2p')" | sed 's/[x!]//g' | sed -r 's/-{2,}//g' | sed -r 's/\ {2}//g' | sed -r 's/\ {2}//g' | sed -n '1p'`"
-fi
 koolproxy_add_rules
+koolproxy_keep
 rm -f /tmp/7620koolproxy.tgz /tmp/cron_adb.lock
 /etc/storage/ez_buttons_script.sh 3 & #更新按钮状态
 logger -t "【koolproxy】" "守护进程启动"
